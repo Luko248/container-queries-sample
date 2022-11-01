@@ -28,3 +28,18 @@
    /* height: 100cqb; */
    /* height: 100cqh; */
 }
+
+
+
+//Style queries
+@container style(background-color: var(--color-black)) {
+    .card {
+        background-color: green;
+    }
+}
+
+@container article (inline-size > 550px) and style(--responsive: true) {
+    .card {
+        background-color: red;
+    }
+}
