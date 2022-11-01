@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="cs-CZ">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Container Queries - Samlpe 2</title>
+    <meta name="description" content="" />
+    <meta name="author" content="Lukáš Chylík" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3, viewport-fit=cover" />
+    <meta name="keywords" content="" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <link rel="stylesheet" href="css/global.css" type="text/css">
+    <link rel="stylesheet" href="css/sample2.css" type="text/css">
+</head>
+
+<body>
+    <nav>
+        <ul class="menu">
+            <li><a href="sample1.html">Sample 1</a></li>
+            <li><a href="sample2.html">Sample 2</a></li>
+            <li><a href="sample3.html">Sample 3</a></li>
+            <li><a href="sample4.html">Sample 4</a></li>
+        </ul>
+    </nav>
+
+    <header class="grid-center">
+        <div class="content">
+            <h1>New container query length units</h1>
+            <ul>
+                <li><strong>cqw</strong> - 1% of a query container’s width</li>
+                <li><strong>cqh</strong> - 1% of a query container’s height</li>
+                <li><strong>cqi</strong> - 1% of a query container’s inline size</li>
+                <li><strong>cqb</strong> - 1% of a query container’s block size</li>
+                <li><strong>cqmin</strong> - The smaller value of cqi or cqb</li>
+                <li><strong>cqmax</strong> - The larger value of cqi or cqb</li>
+            </ul>
+        </div> 
+    </header>
+
+    <main>
+        <section>           
+            <div class="content">
+                <div class="example">
+                    <div class="container" data-type="small">
+                     <div>
+                        <p>In publishing and graphic design, lorem ipsum is common placeholder</p>
+                     </div>
+                    </div>
+                    <div class="container" data-type="medium">
+                      <p>In publishing and graphic design, lorem ipsum is common placeholder</p>
+                    </div>
+                    <div class="container" data-type="large">
+                      <p>In publishing and graphic design, lorem ipsum is common placeholder</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <a href="https://caniuse.com/?search=%40container" target="_blank" rel="external">
+            Can I Use?
+        </a>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Container_Queries" target="_blank" rel="external">
+            developer.mozilla.org
+        </a>
+        <a href="https://www.w3.org/TR/css-contain-3/" target="_blank" rel="external">
+            W3C @container
+        </a>
+    </footer>
+</body>

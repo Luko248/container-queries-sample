@@ -1,0 +1,124 @@
+:root {  
+    --color-white: white;
+    --color-black: black;
+    --color-orange: orange;
+    --color-lime: lime;
+    --color-purple: purple;
+    --color-accent: var(--color-purple);
+    --color-bg: hsl(0, 0%, 13%);
+    --color-text: hsl(0, 0%, 15%);
+    --gap: 1rem;
+    --nav-height: 50px;
+}
+
+body {
+    display: flex;
+    flex-flow: column nowrap;
+    min-block-size: 100vh;
+    padding: 0;
+    margin: 0;
+    color: var(--color-white);
+    font-family: sans-serif;   
+}
+
+*{
+    box-sizing: border-box;
+}
+
+header{
+    background-image: repeating-linear-gradient(135deg, hsla(0,0%,0%,.1) .5%, hsla(0,0%,0%,.2%) 1%), 
+                      linear-gradient(135deg, var(--color-orange), var(--color-purple));
+    padding-block: 5vh;
+    min-height: 40vh; 
+    font-size: 4rem;
+    padding-block-start: var(--nav-height);
+}
+
+header h1{
+    line-height: 1;
+    margin-block-start: 0;
+    font-size: 1em;
+}
+
+header ul:not([class]){
+    margin: 0;
+}
+
+header p, header li{
+    line-height: 1.7;
+    font-size: .4em;
+}
+
+main{
+    flex: auto;
+}
+
+section{
+    padding-block: 8vh;
+    background-color: var(--color-bg);
+}
+
+.content{
+    inline-size: min(calc(100% - 3rem), 1024px);
+    margin-inline: auto;
+}
+
+.grid-center{
+    display: grid;
+    align-items: center;
+}
+
+.desc{
+    line-height: 1.7;
+    font-size: large;
+}
+
+nav{
+    position: sticky;
+    inset: 0 0 auto 0;
+    background-color: var(--color-bg);
+    z-index: 9999;
+    box-shadow: 0 0 .5rem 0 var(--color-black);
+}
+
+.menu{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(var(--gap), auto));
+    align-items: center;
+    justify-content: center;
+    column-gap: var(--gap);
+    margin-block: 0;
+    list-style: none;
+    padding-inline: 2rem;
+}
+
+.menu > li{
+    height: var(--nav-height);
+    display: grid;
+    align-items: center;
+}
+
+.menu a{
+    --link-color: var(--color-orange);
+    color: var(--link-color);
+    display: inline-block;
+    padding-inline: var(--gap);
+}
+
+.menu a:hover,
+.menu a:focus{
+    --link-color: var(--color-lime);
+}
+
+footer{
+    background-color: var(--color-black);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(var(--gap), auto));
+    padding-block: calc(var(--gap) * 2);
+    justify-content: center;
+    column-gap: calc(var(--gap) * 2);;
+}
+
+footer > a{
+    text-align: center;
+}

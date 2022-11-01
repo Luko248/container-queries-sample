@@ -1,0 +1,95 @@
+:root {
+    --aside-width: 375px;
+}
+
+body {
+    margin: 0;
+}
+
+section {
+    padding-block: 0 !important;
+    display: grid;
+    grid-template-columns: minmax(1rem, 1fr) var(--aside-width);
+    align-items: stretch;
+}
+
+section:where(h3) {
+    font-size: clamp(1.5rem, 5cqi, 2.5rem);
+}
+
+section > * {
+    container-type: inline-size;
+}
+
+article {
+    inline-size: min(calc(100% - 2rem));
+    container-name: article;
+    //container: article / inline-size; //container-name is always as first param in syntax shorthand. */
+    margin-inline: auto;
+    padding-block: 2rem;
+}
+
+aside {
+    display: grid;
+    gap: 1rem;
+    background-color: var(--color-black);
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: clamp(2rem, 5vh, 3.5rem);
+    margin-top: 0;
+}
+
+.card {
+    --card_flex-flow: column wrap;
+    --card-img_min-inline-size: 100%;
+    background-color: white;
+    display: flex;
+    flex-flow: var(--card_flex-flow);
+    box-shadow: 0 0 1rem 0 hsla(0, 0%, 0%, 0.3);
+    border-radius: 0.5em;
+    overflow: hidden;
+}
+
+.card > img {
+    object-fit: cover;
+    min-width: var(--card-img_min-inline-size);
+    aspect-ratio: 3 / 1.5;
+}
+
+.card__content {
+    padding: 1rem;
+    color: black;
+    box-sizing: border-box;
+}
+
+.card__content h3 {
+    margin-block-start: 0;
+    font-size: clamp(1.5rem, 5cqi, 5vh);
+}
+
+button {
+    display: inline-block;
+    border-radius: 0.25em;
+    font-size: medium;
+    padding-inline: 1rem;
+    padding-block: 0.5rem;
+    border-width: 0;
+    background: hsl(0, 0%, 10%);
+    color: white;
+}
+
+@container (inline-size >= 550px) {
+    .card {
+        --card_flex-flow: row nowrap;
+        --card-img_min-inline-size: unset;
+    }
+}
+
+@container article (inline-size < 425px) {
+    .card {
+        filter: invert(1);
+    }
+}
