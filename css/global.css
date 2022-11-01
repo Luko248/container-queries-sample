@@ -4,6 +4,7 @@
     --color-orange: orange;
     --color-lime: lime;
     --color-purple: purple;
+    --color-violet: violet;
     --color-accent: var(--color-purple);
     --color-bg: hsl(0, 0%, 13%);
     --color-text: hsl(0, 0%, 15%);
@@ -107,7 +108,7 @@ nav{
 
 .menu a:hover,
 .menu a:focus{
-    --link-color: var(--color-lime);
+    --link-color: var(--color-violet);
 }
 
 footer{
@@ -121,4 +122,5 @@ footer{
 
 footer > a{
     text-align: center;
+    color: var(--color-white);
 }

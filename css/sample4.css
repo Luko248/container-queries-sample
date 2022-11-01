@@ -2,10 +2,6 @@
     --aside-width: 375px;
 }
 
-body {
-    margin: 0;
-}
-
 section {
     padding-block: 0 !important;
     display: grid;
@@ -27,6 +23,7 @@ article {
     //container: article / inline-size; //container-name is always as first param in syntax shorthand. */
     margin-inline: auto;
     padding-block: 2rem;
+    padding-inline: 2rem;
 }
 
 aside {
@@ -91,5 +88,19 @@ button {
 @container article (inline-size < 425px) {
     .card {
         filter: invert(1);
+    }
+}
+
+
+//Style queries
+@container style(background-color: var(--color-black)) {
+    .card {
+        background-color: green;
+    }
+}
+
+@container article (inline-size > 550px) and style(--responsive: true) {
+    .card {
+        background-color: red;
     }
 }

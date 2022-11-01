@@ -2,10 +2,6 @@
     --aside-width: 375px;
 }
 
-body {
-    margin: 0;
-}
-
 section {
     padding-block: 0 !important;
     display: grid;
@@ -25,6 +21,7 @@ article {
     inline-size: min(calc(100% - 2rem));
     margin-inline: auto;
     padding-block: 2rem;
+    padding-inline: 2rem;
 }
 
 aside {
