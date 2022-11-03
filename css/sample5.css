@@ -5,14 +5,16 @@
     gap: 5rem;
     background-color: var(--color-black);
     padding: 5rem;
-    block-size: 60vh;
-    /* height: 60vh; */
+    /* block-size: 60vh; */
+     /* height: 60vh; */
+    min-block-size: 60vh;
+   
 }
 
 .banner h2{
     text-transform: uppercase;
     color: var(--color-violet);
-    font-size: 3em;
+    font-size: clamp(1rem, calc(3rem + .5rem), 8vh);
     margin: 0;
     margin-block-end: .5em;
 }
